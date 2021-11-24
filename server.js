@@ -120,6 +120,6 @@ initDb(function(err){
 });
 
 app.listen(port, ip);
-console.log('JRD Server running on http://%s:%s', ip, port);
+console.log('JRD - Server running on http://%s:%s', ip, port);
 
 module.exports = app ;
