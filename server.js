@@ -53,6 +53,7 @@ var db = null,
     dbDetails = new Object();
 
 var initDb = function(callback) {
+  console.log("initDb: mongoURL=%s", mongoURL);
   if (mongoURL == null) return;
 
   var mongodb = require('mongodb');
@@ -90,6 +91,7 @@ app.get('/', function (req, res) {
       res.render('index.html', { pageCountMessage : count, dbInfo: dbDetails });
     });
   } else {
+    console.log("serving index.html with null");
     res.render('index.html', { pageCountMessage : null});
   }
 });
